@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>History</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+<div class="logo">Teenager Playbook</div>
+<nav id="nav"></nav>
+</header>
+
+
+<div class="container">
+<h2>Session History</h2>
+<table class="table" id="historyTable"></table>
+</div>
+
+
+<script src="auth.js"></script>
+<script>
+const h=JSON.parse(localStorage.getItem("tp_history")||"[]");
+const t=document.getElementById("historyTable");
+t.innerHTML="<tr><th>Video</th><th>Time</th></tr>"+h.map(x=>`<tr><td>${x.video}</td><td>${x.time}</td></tr>`).join("");
+</script>
+</body>
+</html>
