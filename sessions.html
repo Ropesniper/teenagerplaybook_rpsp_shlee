@@ -1,33 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My Sessions</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Sessions - Teenager Playbook</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="navbar">
-<div class="logo">Teenager Playbook</div>
-<nav id="nav"></nav>
+  <div class="logo">Teenager Playbook</div>
+  <nav id="nav"></nav>
 </header>
 
-
 <div class="session-box">
-<button class="session-pill" onclick="openSession('intonation')">Intonation</button>
-<button class="session-pill" onclick="openSession('body')">Body Language</button>
-<button class="session-pill" onclick="openSession('face')">Facial Expression</button>
+  <button class="session-pill" onclick="location.href='intonation.html'">Intonation</button>
+  <button class="session-pill" onclick="location.href='body.html'">Body Language</button>
+  <button class="session-pill" onclick="location.href='face.html'">Facial Expression</button>
 </div>
-
-
-<div id="modal" class="modal hidden">
-<div class="modal-content">
-<button class="btn btn-outline" onclick="closeVideo()">Exit</button>
-<video id="player" controls></video>
-</div>
-</div>
-
 
 <script src="auth.js"></script>
-<script src="ai.js"></script>
-<script src="app.js"></script>
 </body>
 </html>
