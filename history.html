@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>History</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>History</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="navbar">
-<div class="logo">Teenager Playbook</div>
-<nav id="nav"></nav>
-</header>
-
+<header class="navbar"><div class="logo">Teenager Playbook</div><nav id="nav"></nav></header>
 
 <div class="container">
-<h2>Session History</h2>
-<table class="table" id="historyTable"></table>
+  <h2>History of Completed Videos</h2>
+  <table class="table" id="history-table">
+    <tr><th>Video</th><th>Time</th></tr>
+  </table>
 </div>
-
 
 <script src="auth.js"></script>
 <script>
+requireLogin();
 const h=JSON.parse(localStorage.getItem("tp_history")||"[]");
-const t=document.getElementById("historyTable");
-t.innerHTML="<tr><th>Video</th><th>Time</th></tr>"+h.map(x=>`<tr><td>${x.video}</td><td>${x.time}</td></tr>`).join("");
+const table=document.getElementById("history-table");
+h.forEach(r=>{const tr=document.createElement("tr");tr.innerHTML=`<td>${r.video}</td><td>${r.time}</td>`;table.appendChild(tr);});
 </script>
 </body>
 </html>
