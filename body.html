@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Body Language Session</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar"><div class="logo">Teenager Playbook</div><nav id="nav"></nav></header>
+
+<div class="session-box">
+  <button class="session-pill" onclick="openVideo('body',0)">Video 1</button>
+  <button class="session-pill" onclick="openVideo('body',1)">Video 2</button>
+</div>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <video id="player" controls></video>
+  </div>
+</div>
+
+<script src="auth.js"></script>
+<script src="app.js"></script>
+<script src="ai-gesture.js"></script>
+</body>
+</html>
