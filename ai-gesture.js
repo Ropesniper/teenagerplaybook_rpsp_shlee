@@ -6,5 +6,5 @@ async function runGestureAI(callback){
   await videoElement.play();
   let score=Math.floor(Math.random()*30)+60;
   alert("Body language score: "+score+"%");
-  if(score>=80){ callback(); } else alert("Improve posture and gesture clarity.");
+  if(score>=80){ callback(); } else alert("Try o show clearer posture and gesture clarity please.");
 }
