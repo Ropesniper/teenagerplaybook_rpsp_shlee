@@ -5,7 +5,7 @@ const videoMap = {
 };
 
 const timers = {
-  intonation:[[4,10],[6,14]],
+  intonation:[[5,10],[6,14]],
   body:[[5,11],[7,16]],
   face:[[3,9],[5,13]]
 };
