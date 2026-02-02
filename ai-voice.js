@@ -11,5 +11,5 @@ async function runVoiceAI(callback){
   let score=Math.min(100,Math.floor(avg));
   if(score<50) score+=30;
   alert("Intonation score: "+score+"%");
-  if(score>=80){ callback(); } else alert("Try clearer emphasis and tone variation.");
+  if(score>=80){ callback(); } else alert("Try clearer emphasis and tone variation please.");
 }
