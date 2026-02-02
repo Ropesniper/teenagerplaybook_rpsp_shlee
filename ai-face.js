@@ -6,5 +6,5 @@ async function runFaceAI(callback){
   await videoElement.play();
   let score=Math.floor(Math.random()*30)+60;
   alert("Facial expression score: "+score+"%");
-  if(score>=80){ callback(); } else alert("Make expressions clearer and emotionally aligned.");
+  if(score>=80){ callback(); } else alert("Try to make expressions clearer and emotionally aligned please.");
 }
