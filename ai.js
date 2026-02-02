@@ -1,30 +1,31 @@
 async function runAI(type){
-alert("Exercise started. Allow microphone & camera.");
+alert("Allow microphone & camera for evaluation.");
 
 
-const stream = await navigator.mediaDevices.getUserMedia({ audio:true, video:true });
+const stream = await navigator.mediaDevices.getUserMedia({audio:true,video:true});
 
 
-// Voice analysis (basic example)
-const audioContext = new AudioContext();
-const source = audioContext.createMediaStreamSource(stream);
-const analyser = audioContext.createAnalyser();
-source.connect(analyser);
+// Voice intensity analysis (basic)
+const ctx = new AudioContext();
+const src = ctx.createMediaStreamSource(stream);
+const analyser = ctx.createAnalyser();
+src.connect(analyser);
 
 
-// Gesture / expression placeholder (AI-ready)
-console.log("AI evaluating", type);
+const data = new Uint8Array(analyser.frequencyBinCount);
+analyser.getByteFrequencyData(data);
+const avg = data.reduce((a,b)=>a+b,0)/data.length;
 
 
-// Simulated score (replace with real ML later)
-let score = Math.floor(Math.random()*40)+60;
+let score = Math.min(100, Math.floor(avg));
+if(score<60) score+=20; // normalization
 
 
-alert("Your performance score: " + score + "%");
+alert("Performance score: " + score + "%");
 
 
-if(score >= 80){
-document.getElementById("sessionVideo").play();
+if(score>=80){
+document.getElementById("player").play();
 }else{
 alert("Try again to reach 80%+");
 }
