@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sessions</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+<div class="logo">Teenager Playbook</div>
+<nav id="nav-links"></nav>
+</header>
+
+
+<div class="sessions-container">
+<button class="session-card" onclick="openSession('intonation')">Intonation</button>
+<button class="session-card" onclick="openSession('body')">Body Language</button>
+<button class="session-card" onclick="openSession('face')">Facial Expression</button>
+</div>
+
+
+<div id="videoModal" class="modal hidden">
+<div class="modal-content">
+<button class="btn-secondary" onclick="closeVideo()">Exit</button>
+<video id="sessionVideo" controls></video>
+</div>
+</div>
+
+
+<script src="auth.js"></script>
+<script src="ai.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
