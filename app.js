@@ -1,5 +1,5 @@
 const videoMap = {
-  intonation:["videos/IntonationVideo1.mp4","videos/intonation2.mp4"],
+  intonation:["videos/Intonation1Video.mp4","videos/intonation2.mp4"],
   body:["videos/body1.mp4","videos/body2.mp4"],
   face:["videos/face1.mp4","videos/face2.mp4"]
 };
